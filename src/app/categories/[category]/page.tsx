@@ -67,39 +67,43 @@ export default async function CategoryPage({
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {categoryOpportunities.map((opportunity) => (
             <a
-              key={opportunity.id}
-              href={`/opportunities/${opportunity.id}`}
-              className="block rounded-xl border border-gray-200 p-6 transition hover:border-blue-400 hover:shadow-md"
+            key={opportunity.id}
+            href={`/opportunities/${opportunity.id}`}
+            className="block rounded-xl border border-gray-200 p-6 transition hover:border-blue-400 hover:shadow-md"
             >
-              <p className="text-sm font-medium text-blue-600">
+            <p className="text-sm font-medium text-blue-600">
                 {opportunity.category}
-              </p>
+            </p>
 
-              <h2 className="mt-2 text-xl font-semibold">
+            <h2 className="mt-2 text-xl font-semibold">
                 {opportunity.title}
-              </h2>
+            </h2>
 
-              <p className="mt-3 text-sm text-gray-600">
+            <p className="mt-3 text-sm text-gray-600">
                 {opportunity.description}
-              </p>
+            </p>
 
-              <div className="mt-4 text-sm text-gray-500">
+            <div className="mt-4 space-y-1 text-sm text-gray-500">
                 <p>
-                  Organization: {opportunity.organization}
+                Organization: {opportunity.organization}
                 </p>
 
                 <p>
-                  Country: {opportunity.country}
+                Country: {opportunity.country}
                 </p>
 
                 <p>
-                  Deadline: {opportunity.deadline}
+                Deadline: {opportunity.deadline}
                 </p>
-              </div>
 
-              <span className="mt-5 inline-block font-medium text-blue-600">
+                <p>
+                Cost: {opportunity.cost}
+                </p>
+            </div>
+
+            <span className="mt-5 inline-block font-medium text-blue-600">
                 View opportunity →
-              </span>
+            </span>
             </a>
           ))}
         </div>

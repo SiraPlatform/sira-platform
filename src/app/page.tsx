@@ -131,10 +131,22 @@ export default function Home() {
                   {opportunity.description}
                 </p>
 
-                <div className="mt-4 text-sm text-gray-500">
-                  <p>Organization: {opportunity.organization}</p>
-                  <p>Country: {opportunity.country}</p>
-                  <p>Deadline: {opportunity.deadline}</p>
+                <div className="mt-4 space-y-1 text-sm text-gray-500">
+                  <p>
+                    Organization: {opportunity.organization}
+                  </p>
+
+                  <p>
+                    Country: {opportunity.country}
+                  </p>
+
+                  <p>
+                    Deadline: {opportunity.deadline}
+                  </p>
+
+                  <p>
+                    Cost: {opportunity.cost}
+                  </p>
                 </div>
 
                 <span className="mt-5 inline-block font-medium text-blue-600">
