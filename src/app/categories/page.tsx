@@ -81,7 +81,7 @@ export default function CategoriesPage() {
           {categories.map((category) => (
             <a
               key={category.name}
-              href="#"
+              href={`/categories/${category.name.toLowerCase().replaceAll(" ", "-")}`}
               className="rounded-xl border border-gray-200 p-6 transition hover:border-blue-400 hover:shadow-md"
             >
               <h2 className="text-xl font-semibold">
