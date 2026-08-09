@@ -43,7 +43,7 @@ export default async function OpportunityPage({
 
         <div className="mt-8">
           <p className="text-sm font-medium text-blue-600">
-            {opportunity.category}
+            {opportunity.subCategory}
           </p>
 
           <h1 className="mt-2 text-4xl font-bold">
@@ -88,7 +88,7 @@ export default async function OpportunityPage({
                 Cost
               </p>
               <p className="mt-1 font-medium">
-                {opportunity.cost}
+                {opportunity.costType}
               </p>
             </div>
 
@@ -131,7 +131,7 @@ export default async function OpportunityPage({
             </h2>
 
             <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
-              {opportunity.requirements.map(
+              {opportunity.applicationRequirements.map(
                 (requirement) => (
                   <li key={requirement}>
                     {requirement}
@@ -148,7 +148,7 @@ export default async function OpportunityPage({
             </h2>
 
             <p className="mt-2 text-sm text-green-700">
-              Last verified: {opportunity.verifiedDate}
+              Last verified: {opportunity.lastVerified}
             </p>
 
             <a
@@ -164,7 +164,7 @@ export default async function OpportunityPage({
           {/* Application */}
           <div className="mt-10">
             <a
-              href={opportunity.officialUrl}
+              href={opportunity.applicationUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700"

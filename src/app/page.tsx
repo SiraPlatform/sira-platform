@@ -120,7 +120,7 @@ export default function Home() {
                 className="block rounded-xl border border-gray-200 bg-white p-6 transition hover:border-blue-400 hover:shadow-md"
               >
                 <p className="text-sm font-medium text-blue-600">
-                  {opportunity.category}
+                  {opportunity.subCategory}
                 </p>
 
                 <h3 className="mt-2 text-xl font-semibold">
@@ -145,7 +145,7 @@ export default function Home() {
                   </p>
 
                   <p>
-                    Cost: {opportunity.cost}
+                    Cost: {opportunity.costType}
                   </p>
                 </div>
 

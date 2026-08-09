@@ -31,7 +31,7 @@ export default async function CategoryPage({
   }
 
   const categoryOpportunities = opportunities.filter(
-    (opportunity) => opportunity.category === categoryName
+  (opportunity) => opportunity.subCategory === categoryName
   );
 
   return (
@@ -72,7 +72,7 @@ export default async function CategoryPage({
             className="block rounded-xl border border-gray-200 p-6 transition hover:border-blue-400 hover:shadow-md"
             >
             <p className="text-sm font-medium text-blue-600">
-                {opportunity.category}
+                {opportunity.subCategory}
             </p>
 
             <h2 className="mt-2 text-xl font-semibold">
@@ -97,7 +97,7 @@ export default async function CategoryPage({
                 </p>
 
                 <p>
-                Cost: {opportunity.cost}
+                Cost: {opportunity.costType}
                 </p>
             </div>
 
